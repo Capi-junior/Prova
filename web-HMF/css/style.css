@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:wght@400;500&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+
+    font-family: 'Cinzel', serif;
+    background-color: var(--blanc);
+    color: var(--blanc);
+    line-height: 1.6;
+}
+
+
+/* Títols clàssics */
+h1, h2 {
+    font-family: 'Cinzel', serif;
+}
+
+/* Text del cos */
+p, li, nav a {
+    font-family: 'Lora', serif;
+}
+
+/* Colors base */
+:root {
+    --negre: #0d0d0d;
+    --gris-fosc: #1a1a1a;
+    --gris-metal: #2e2e2e;
+    --vermell-racing: #d40000;
+    --blanc: #f2f2f2;
+}
+
+/* Header */
+header {
+    background: linear-gradient(to right, #000, #2b2b2b);
+    padding: 20px;
+    border-bottom: 4px solid var(--vermell-racing);
+}
+
+h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.8rem;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Menú */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--blanc);
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--vermell-racing);
+    text-shadow: 0 0 10px var(--vermell-racing);
+}
+
+/* Contingut */
+
+main {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+
+h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    border-left: 6px solid var(--vermell-racing);
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+/* Seccions */
+section {
+    background-color: var(--gris-fosc);
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--gris-metal);
+    box-shadow: 0 0 10px #000;
+}
+
+/* Paràgrafs */
+p {
+    font-size: 1.1rem;
+}
+
+/* Efecte asfalt */
+section {
+    background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
+}
+
+/* Logotip */
+.logo {
+    height: 90px;          
+    width: auto;
+    display: block;
+}
+
+/* Alineació del header */
+header {
+    display: flex;
+    align-items: center;
+    gap: 20px;             
+}
+
+.logo {
+    height: 50px;
+}
+
+
+/* Responsive */
+@media (max-width: 700px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Imatges sponsors */
+
+.sponsor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.sponsor-grid img {
+    width: 550px;
+    height: auto;
+    filter: grayscale(100%);
+    opacity: 0.8;
+    transition: 0.3s ease;
+}
+
+.sponsor-grid img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.carrusel {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Carrusel d'imatges */
+
+.carrusel ul{
+    display: flex;
+    padding: 0;
+    width: 500%;
+    animation: slider 10s infinite linear;
+    animation-direction: linear;
+}
+
+
+.carrusel li{
+    width: 100%;
+    list-style: none;
+}
+
+
+.carrusel img{
+    width: 100%;
+}
+
+
+@keyframes slider {
+    0% {margin-left: 0}
+    16% {margin-left: 0}
+    21% {margin-left: -100%}
+    36% {margin-left: -100%}
+    41% {margin-left: -200%}
+    56% {margin-left: -200%}
+    61% {margin-left: -300%}
+    76% {margin-left: -300%}
+    81% {margin-left: -400%}
+    96% {margin-left: -400%}
+    100%{margin-left: 0%}
+}
+
+
+footer {
+    text-align: center;
+    background-color: #000000;
+    padding: 20px;
+    height: 150px;
+    width: 100%;
+    border-top: 4px solid var(--vermell-racing);
+    margin-top: auto;
+}
+
+
+/* Secció Dates - Calendari */
+.dates {
+    background-color: var(--gris-fosc);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--gris-metal);
+    box-shadow: 0 0 10px #000;
+    margin-top: 40px;
+}
+
+.dates h2, .dates h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--blanc);
+    border-left: 6px solid var(--vermell-racing);
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+.calendar {
+    background-color: var(--gris-metal);
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+.calendar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.calendar li {
+    margin-bottom: 8px;
+    font-family: 'Lora', serif;
+}
+
+/* Taula d’esdeveniments */
+.event-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Lora', serif;
+}
+
+.event-table th, .event-table td {
+    border: 1px solid var(--gris-metal);
+    padding: 10px;
+    text-align: left;
+}
+
+.event-table th {
+    background-color: var(--vermell-racing);
+    color: var(--blanc);
+    font-family: 'Cinzel', serif;
+}
+
+.event-table tr:nth-child(even) {
+    background-color: var(--gris-metal);
+}
+
+.event-table tr:hover {
+    background-color: var(--vermell-racing);
+    color: var(--blanc);
+    transition: 0.3s;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Cinzel', serif;
+    background-color: var(--blanc);
+    color: var(--blanc);
+    line-height: 1.6;
+}
+
+.page-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+    background-color: #000000;
+    padding: 20px;
+    height: 150px;
+    width: 100%;
+    border-top: 4px solid var(--vermell-racing);
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;   /* Centra horitzontalment */
+    align-items: center;       /* Centra verticalment */
+    gap: 20px;                 /* Espai entre enllaços */
+}
+
+footer ul li a {
+    color: var(--blanc);
+    text-decoration: none;
+}
+
+
+.faq {
+    background-color: var(--gris-fosc);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--gris-metal);
+    box-shadow: 0 0 10px #000;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--vermell-racing);
+    margin-bottom: 5px;
+}
+
+.faq-item p {
+    font-family: 'Lora', serif;
+    color: var(--blanc);
+    margin: 0;
+}
+
+.registre {
+    background-color: var(--gris-fosc);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--gris-metal);
+    box-shadow: 0 0 10px #000;
+}
+
+.registre-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.registre-form label {
+    font-family: 'Cinzel', serif;
+    color: var(--vermell-racing);
+    font-weight: bold;
+}
+
+.registre-form input,
+.registre-form textarea {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid var(--gris-metal);
+    background-color: var(--gris-fosc);
+    color: var(--blanc);
+    font-family: 'Lora', serif;
+}
+
+.registre-form button {
+    background-color: var(--vermell-racing);
+    color: var(--blanc);
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.registre-form button:hover {
+    background-color: #ff1a1a;
+    transform: scale(1.03);
+}
+
+.contacte {
+    background-color: var(--gris-fosc);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--gris-metal);
+    box-shadow: 0 0 10px #000;
+}
+
+.contacte h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--vermell-racing);
+    margin-top: 20px;
+}
+
+.xarxes {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.xarxes li {
+    margin-bottom: 8px;
+    font-family: 'Lora', serif;
+    color: var(--blanc);
+}
+
+/* Logotip */
+.logo {
+    height: 90px;
+    width: auto;
+    display: block;
+    transition: transform 0.3s ease-out;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
